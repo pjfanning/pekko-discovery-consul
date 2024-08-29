@@ -1,3 +1,5 @@
+import xerial.sbt.Sonatype.sonatypeLegacy
+
 organization := "com.github.pjfanning"
 name := "pekko-discovery-consul"
 
@@ -6,7 +8,7 @@ ThisBuild / crossScalaVersions := Seq("2.12.19", "2.13.14", "3.3.3")
 
 ThisBuild / version := "1.0.0-SNAPSHOT"
 
-scalacOptions += "-target:jvm-11"
+javacOptions += "--release 11"
 
 val pekkoVersion = "1.0.3"
 
@@ -24,15 +26,11 @@ libraryDependencies ++= Seq(
   "ch.qos.logback" % "logback-classic" % "1.3.14" % Test
 )
 
+ThisBuild / sonatypeCredentialHost := sonatypeLegacy
+
 publishMavenStyle := true
 
-publishTo := {
-  val nexus = "https://oss.sonatype.org/"
-  if (isSnapshot.value)
-    Some("snapshots" at nexus + "content/repositories/snapshots")
-  else
-    Some("releases"  at nexus + "service/local/staging/deploy/maven2")
-}
+publishTo := sonatypePublishToBundle.value
 
 Test / publishArtifact := false
 
@@ -41,8 +39,6 @@ pomIncludeRepository := { _ => false }
 homepage := Some(url("https://github.com/pjfanning/pekko-discovery-consul"))
 
 licenses := Seq("The Apache Software License, Version 2.0" -> url("https://www.apache.org/licenses/LICENSE-2.0.txt"))
-
-// releasePublishArtifactsAction := PgpKeys.publishSigned.value
 
 pomExtra := (
   <developers>
