@@ -6,8 +6,6 @@ name := "pekko-discovery-consul"
 ThisBuild / scalaVersion := "2.13.14"
 ThisBuild / crossScalaVersions := Seq("2.12.19", "2.13.14", "3.3.3")
 
-ThisBuild / version := "1.0.0-SNAPSHOT"
-
 javacOptions += "--release 11"
 
 val pekkoVersion = "1.0.3"
