@@ -14,7 +14,7 @@ libraryDependencies ++= Seq(
   "org.apache.pekko" %% "pekko-actor" % pekkoVersion,
   "org.apache.pekko" %% "pekko-discovery" % pekkoVersion,
   "com.typesafe" % "config" % "1.4.3",
-  "com.orbitz.consul" % "consul-client" % "1.5.3",
+  "org.kiwiproject" % "consul-client" % "0.6.0",
   "org.apache.pekko" %% "pekko-testkit" % pekkoVersion % Test,
   "org.apache.pekko" %% "pekko-slf4j" % pekkoVersion % Test,
   "org.testcontainers" % "consul" % "1.20.1" % Test,
