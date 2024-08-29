@@ -15,9 +15,9 @@ package com.github.pjfanning.pekko.discovery.consul
 
 import com.github.pjfanning.pekko.discovery.consul.ConsulServiceDiscovery
 import com.google.common.net.HostAndPort
-import com.orbitz.consul.Consul
-import com.orbitz.consul.model.catalog.ImmutableCatalogRegistration
-import com.orbitz.consul.model.health.ImmutableService
+import org.kiwiproject.consul.Consul
+import org.kiwiproject.consul.model.catalog.ImmutableCatalogRegistration
+import org.kiwiproject.consul.model.health.ImmutableService
 import com.typesafe.config.ConfigFactory
 import org.apache.pekko
 import pekko.actor.ActorSystem
