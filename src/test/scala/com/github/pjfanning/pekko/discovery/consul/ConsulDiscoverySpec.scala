@@ -11,8 +11,9 @@
  * Copyright (C) 2017-2021 Lightbend Inc. <https://www.lightbend.com>
  */
 
-package org.apache.pekko.cluster.bootstrap.discovery
+package com.github.pjfanning.pekko.discovery.consul
 
+import com.github.pjfanning.pekko.discovery.consul.ConsulServiceDiscovery
 import com.google.common.net.HostAndPort
 import com.orbitz.consul.Consul
 import com.orbitz.consul.model.catalog.ImmutableCatalogRegistration
@@ -21,7 +22,6 @@ import com.typesafe.config.ConfigFactory
 import org.apache.pekko
 import pekko.actor.ActorSystem
 import pekko.discovery.ServiceDiscovery.ResolvedTarget
-import pekko.discovery.consul.ConsulServiceDiscovery
 import pekko.testkit.TestKitBase
 import org.scalatest.BeforeAndAfterAll
 import org.scalatest.concurrent.ScalaFutures
@@ -69,7 +69,7 @@ class ConsulDiscoverySpec
             .build())
 
       val cfg = ConfigFactory.parseString(s"""
-        pekko.discovery.pekko-consul {
+        pekko-discovery-consul {
           consul-host = "${consul.getHost()}"
           consul-port = $consulPort
         }

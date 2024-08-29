@@ -11,7 +11,7 @@
  * Copyright (C) 2017-2021 Lightbend Inc. <https://www.lightbend.com>
  */
 
-package org.apache.pekko.discovery.consul
+package com.github.pjfanning.pekko.discovery.consul
 
 import com.google.common.net.HostAndPort
 import com.orbitz.consul.Consul
@@ -23,7 +23,7 @@ import org.apache.pekko
 import pekko.actor.ActorSystem
 import pekko.annotation.ApiMayChange
 import pekko.discovery.ServiceDiscovery.{ Resolved, ResolvedTarget }
-import pekko.discovery.consul.ConsulServiceDiscovery._
+import ConsulServiceDiscovery._
 import pekko.discovery.{ Lookup, ServiceDiscovery }
 import pekko.pattern.after
 import pekko.util.ccompat.JavaConverters._

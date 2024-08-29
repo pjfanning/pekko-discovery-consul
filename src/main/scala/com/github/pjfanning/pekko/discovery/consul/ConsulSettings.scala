@@ -11,7 +11,7 @@
  * Copyright (C) 2017-2021 Lightbend Inc. <https://www.lightbend.com>
  */
 
-package org.apache.pekko.discovery.consul
+package com.github.pjfanning.pekko.discovery.consul
 
 import org.apache.pekko
 import pekko.actor.ClassicActorSystemProvider
@@ -20,7 +20,7 @@ import pekko.annotation.ApiMayChange
 
 @ApiMayChange
 final class ConsulSettings(system: ExtendedActorSystem) extends Extension {
-  private val consulConfig = system.settings.config.getConfig("pekko.discovery.pekko-consul")
+  private val consulConfig = system.settings.config.getConfig("pekko-discovery-consul")
 
   val consulHost: String = consulConfig.getString("consul-host")
 
