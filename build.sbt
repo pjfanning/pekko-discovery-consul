@@ -32,25 +32,27 @@ publishTo := sonatypePublishToBundle.value
 
 Test / publishArtifact := false
 
-pomIncludeRepository := { _ => false }
-
 homepage := Some(url("https://github.com/pjfanning/pekko-discovery-consul"))
 
 licenses := Seq("The Apache Software License, Version 2.0" -> url("https://www.apache.org/licenses/LICENSE-2.0.txt"))
 
-pomExtra := (
-  <developers>
-    <developer>
-      <id>pjfanning</id>
-      <name>PJ Fanning</name>
-      <url>https://github.com/pjfanning</url>
-    </developer>
-    <developer>
-      <id>pekko-management-contributors</id>
-      <name>Apache Pekko Management Contributors</name>
-      <url>https://github.com/apache/pekko-management/graphs/contributors</url>
-      <email>dev@pekko.apache.org</email>
-    </developer>
-  </developers>
+ThisBuild / scmInfo := Some(
+  ScmInfo(
+    url("https://github.com/pjfanning/pekko-discovery-consul"),
+    "scm:git@github.com:pjfanning/pekko-discovery-consul.git"
+  )
 )
-
+ThisBuild / developers := List(
+  Developer(
+    id = "pjfanning",
+    name = "PJ Fanning",
+    email = "",
+    url = url("https://github.com/pjfanning")
+  ),
+  Developer(
+    id = "pekko-management-contributors",
+    name = "Apache Pekko Management Contributors",
+    email = "dev@pekko.apache.org",
+    url = url("https://github.com/apache/pekko-management/graphs/contributors")
+  )
+)
