@@ -24,6 +24,8 @@ libraryDependencies ++= Seq(
   "ch.qos.logback" % "logback-classic" % "1.3.14" % Test
 )
 
+AddMetaInfLicenseFiles.settings
+
 ThisBuild / sonatypeCredentialHost := sonatypeLegacy
 
 publishMavenStyle := true
