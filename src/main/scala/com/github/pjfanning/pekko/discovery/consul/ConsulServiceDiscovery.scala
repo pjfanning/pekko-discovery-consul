@@ -14,11 +14,11 @@
 package com.github.pjfanning.pekko.discovery.consul
 
 import com.google.common.net.HostAndPort
-import com.orbitz.consul.Consul
-import com.orbitz.consul.async.ConsulResponseCallback
-import com.orbitz.consul.model.ConsulResponse
-import com.orbitz.consul.model.catalog.CatalogService
-import com.orbitz.consul.option.QueryOptions
+import org.kiwiproject.consul.Consul
+import org.kiwiproject.consul.async.ConsulResponseCallback
+import org.kiwiproject.consul.model.ConsulResponse
+import org.kiwiproject.consul.model.catalog.CatalogService
+import org.kiwiproject.consul.option.QueryOptions
 import org.apache.pekko
 import pekko.actor.ActorSystem
 import pekko.annotation.ApiMayChange
