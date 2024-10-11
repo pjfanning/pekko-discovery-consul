@@ -3,8 +3,8 @@ import xerial.sbt.Sonatype.sonatypeLegacy
 organization := "com.github.pjfanning"
 name := "pekko-discovery-consul"
 
-ThisBuild / scalaVersion := "2.13.14"
-ThisBuild / crossScalaVersions := Seq("2.12.19", "2.13.14", "3.3.3")
+ThisBuild / scalaVersion := "2.13.15"
+ThisBuild / crossScalaVersions := Seq("2.12.20", "2.13.15", "3.3.4")
 
 javacOptions += "--release 11"
 
@@ -19,7 +19,7 @@ libraryDependencies ++= Seq(
   "com.typesafe" % "config" % "1.4.3" % Test,
   "org.apache.pekko" %% "pekko-testkit" % pekkoVersion % Test,
   "org.apache.pekko" %% "pekko-slf4j" % pekkoVersion % Test,
-  "org.testcontainers" % "consul" % "1.20.1" % Test,
+  "org.testcontainers" % "consul" % "1.20.2" % Test,
   "org.scalatest" %% "scalatest" % "3.2.19" % Test,
   "ch.qos.logback" % "logback-classic" % "1.3.14" % Test
 )
