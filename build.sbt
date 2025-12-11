@@ -15,13 +15,13 @@ update / checksums := Nil
 libraryDependencies ++= Seq(
   "org.apache.pekko" %% "pekko-actor" % pekkoVersion,
   "org.apache.pekko" %% "pekko-discovery" % pekkoVersion,
-  "com.typesafe" % "config" % "1.4.3",
+  "com.typesafe" % "config" % "1.4.5",
   "org.kiwiproject" % "consul-client" % "1.4.1",
   "org.apache.pekko" %% "pekko-testkit" % pekkoVersion % Test,
   "org.apache.pekko" %% "pekko-slf4j" % pekkoVersion % Test,
   "org.testcontainers" % "consul" % "1.20.2" % Test,
   "org.scalatest" %% "scalatest" % "3.2.19" % Test,
-  "ch.qos.logback" % "logback-classic" % "1.3.14" % Test
+  "ch.qos.logback" % "logback-classic" % "1.3.15" % Test
 )
 
 AddMetaInfLicenseFiles.settings
